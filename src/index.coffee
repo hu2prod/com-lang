@@ -3,15 +3,10 @@ require 'fy'
 require 'fy/codegen'
 @coffee_script_module = require 'iced-coffee-script'
 
-# LATER
-# {tag_hash} = require 'html-tag-collection'
-# @tag_hash = tag_hash
-
 # missed intentionally. Probably will add later
 # @VERSION
 # @FILE_EXTENSIONS
 # @helpers
-# withPrettyErrors ??
 
 @_HACK_preprocess_arrow = (token_list, opt)->
   new_token_list = []
