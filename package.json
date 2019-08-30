@@ -2,7 +2,7 @@
   "name": "com-lang",
   "version": "1.0.0",
   "description": "iced-coffee-script with extended syntax for CoffeeKup-like components",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "install": "iced -o lib -c src",
     "test": "mocha --recursive --compilers coffee:iced-coffee-script/register --require iced-coffee-coverage/register-istanbul test && istanbul report && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
