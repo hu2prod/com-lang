@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hu2prod/com-lang/issues"
   },
@@ -23,11 +23,11 @@
   "devDependencies": {
     "coveralls": "^2.11.16",
     "iced-coffee-coverage": "^1.0.21",
-    "iced-coffee-script": "^108.0.11",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   },
   "dependencies": {
+    "iced-coffee-script": "^108.0.11",
     "fy": "github:hu2prod/fy"
   }
 }
