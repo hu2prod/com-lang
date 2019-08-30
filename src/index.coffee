@@ -166,20 +166,21 @@ require 'fy/codegen'
           code_chunk_list.push "\n"+indent
   code_chunk_list.join ''
 
-@compile = (code, options={})->
+@preprocess = (code, options={})->
   token_list = @coffee_script_module.tokens code, options
-  code = module._HACK_preprocess_arrow token_list, options
+  module._HACK_preprocess_arrow token_list, options
+
+@compile = (code, options)->
+  code = module.preprocess code, options
   @coffee_script_module.compile code, options
 # @tokens
 # @nodes
-@run = (code, options={})->
-  token_list = @coffee_script_module.tokens code, options
-  code = module._HACK_preprocess_arrow token_list, options
+@run = (code, options)->
+  code = module.preprocess code, options
   @coffee_script_module.run code, options
 
-@eval = (code, options={})->
-  token_list = @coffee_script_module.tokens code, options
-  code = module._HACK_preprocess_arrow token_list, options
+@eval = (code, options)->
+  code = module.preprocess code, options
   @coffee_script_module.eval code, options
 
 # @register

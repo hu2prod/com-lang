@@ -477,6 +477,17 @@ describe 'index section', ()->
       res = mod.eval "a = 1"
       assert.strictEqual res, 1
       return
+    it 'preprocess a -> b', ()->
+      res = mod.preprocess """
+        a
+          b
+      """
+      assert.strictEqual res, """
+      a =>
+        b =>
+      
+      """
+      return
       
     
   
