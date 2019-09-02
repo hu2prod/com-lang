@@ -33,6 +33,4 @@ com-lang (after)
           "text"
     
 # How to use with react
-webcom toolchain will be published soon.
-
-webcom-delivery does a thing.
+see https://github.com/hu2prod/webcom-hello-world
